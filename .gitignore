@@ -1,0 +1,19 @@
+# Build artifacts
+/api
+/bin/
+/tmp/
+
+# Go caches
+/.gocache/
+/pkg/
+
+# Env/config
+.env
+.env.*
+
+# IDE/editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+

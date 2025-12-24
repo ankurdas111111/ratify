@@ -1,0 +1,31 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# Build the api entrypoint and drop the binary in tmp/
+cmd = "go build -o ./tmp/api ./cmd/api"
+bin = "tmp/api"
+full_bin = "./tmp/api"
+include_ext = ["go", "tpl", "tmpl", "html"]
+exclude_dir = ["vendor", "tmp", "bin"]
+exclude_file = []
+exclude_regex = ["_test\\.go"]
+follow_symlink = true
+delay = 1000
+kill_delay = 500
+send_interrupt = true
+stop_on_error = false
+
+[log]
+time = true
+
+[color]
+main = "white"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+app = "magenta"
+
+[misc]
+clean_on_exit = true
+
