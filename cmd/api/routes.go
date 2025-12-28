@@ -6,7 +6,7 @@ func (app *app) routes() http.Handler {
 	mux := http.NewServeMux()
 	mux.Handle("/about", app.getAbout())
 	mux.Handle("/test", app.getTest())
-	return app.rateLimit(mux, 2, 10)
+	return app.rateLimit(mux, 1, 2)
 }
 
 func (app *app) getAbout() http.Handler {
